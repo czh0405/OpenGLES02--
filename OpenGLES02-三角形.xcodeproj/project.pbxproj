@@ -13,6 +13,10 @@
 		5C2A90681F4ADCE70094231B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A90661F4ADCE70094231B /* Main.storyboard */; };
 		5C2A906A1F4ADCE70094231B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A90691F4ADCE70094231B /* Assets.xcassets */; };
 		5C2A906D1F4ADCE70094231B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A906B1F4ADCE70094231B /* LaunchScreen.storyboard */; };
+		5C2A90761F4ADDB30094231B /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A90751F4ADDB30094231B /* OpenGLView.m */; };
+		5C2A907A1F4ADF4B0094231B /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A90791F4ADF4B0094231B /* Shader.vsh */; };
+		5C2A907C1F4ADF5C0094231B /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A907B1F4ADF5C0094231B /* Shader.fsh */; };
+		5C2A907F1F4AE3B20094231B /* GLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A907D1F4AE3B20094231B /* GLUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		5C2A90691F4ADCE70094231B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2A906C1F4ADCE70094231B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C2A906E1F4ADCE70094231B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2A90741F4ADDB30094231B /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		5C2A90751F4ADDB30094231B /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		5C2A90791F4ADF4B0094231B /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		5C2A907B1F4ADF5C0094231B /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		5C2A907D1F4AE3B20094231B /* GLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLUtils.cpp; sourceTree = "<group>"; };
+		5C2A907E1F4AE3B20094231B /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,10 @@
 		5C2A905C1F4ADCE60094231B /* OpenGLES02-三角形 */ = {
 			isa = PBXGroup;
 			children = (
+				5C2A90781F4ADF060094231B /* Utils */,
+				5C2A90771F4ADEE80094231B /* Shader */,
+				5C2A90741F4ADDB30094231B /* OpenGLView.h */,
+				5C2A90751F4ADDB30094231B /* OpenGLView.m */,
 				5C2A90601F4ADCE60094231B /* AppDelegate.h */,
 				5C2A90611F4ADCE60094231B /* AppDelegate.m */,
 				5C2A90631F4ADCE60094231B /* ViewController.h */,
@@ -77,6 +91,24 @@
 				5C2A905E1F4ADCE60094231B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C2A90771F4ADEE80094231B /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A90791F4ADF4B0094231B /* Shader.vsh */,
+				5C2A907B1F4ADF5C0094231B /* Shader.fsh */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		5C2A90781F4ADF060094231B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A907D1F4AE3B20094231B /* GLUtils.cpp */,
+				5C2A907E1F4AE3B20094231B /* GLUtils.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2A907A1F4ADF4B0094231B /* Shader.vsh in Resources */,
 				5C2A906D1F4ADCE70094231B /* LaunchScreen.storyboard in Resources */,
 				5C2A906A1F4ADCE70094231B /* Assets.xcassets in Resources */,
 				5C2A90681F4ADCE70094231B /* Main.storyboard in Resources */,
+				5C2A907C1F4ADF5C0094231B /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +188,8 @@
 				5C2A90651F4ADCE60094231B /* ViewController.m in Sources */,
 				5C2A90621F4ADCE60094231B /* AppDelegate.m in Sources */,
 				5C2A905F1F4ADCE60094231B /* main.m in Sources */,
+				5C2A90761F4ADDB30094231B /* OpenGLView.m in Sources */,
+				5C2A907F1F4AE3B20094231B /* GLUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
